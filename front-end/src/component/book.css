@@ -1,0 +1,70 @@
+.booking-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.booking-popup {
+  position: relative;
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 8px;
+  width: 320px;
+  max-width: 90%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.booking-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+}
+.booking-title {
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: orange;
+  text-align: center;
+}
+.booking-subtitle {
+  font-size: 0.9rem;
+  color: #333;
+  text-align: center;
+}
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+.booking-form input {
+  padding: 8px 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+.booking-submit-btn {
+  align-self: center;
+  width:180px;
+  padding: 10px 0;
+  background: orange;
+  color: #000000;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s all;
+}
+.booking-submit-btn:hover {
+  background: #333;
+}

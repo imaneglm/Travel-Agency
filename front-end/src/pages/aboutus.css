@@ -1,0 +1,54 @@
+.about-container {
+  width: 100%;
+}
+.about-header {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("https://images.unsplash.com/photo-1505761671935-60b3a7427bad");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 12vw 2vw;
+}
+.about-header h1 {
+  font-size: 4vw;
+  margin-bottom: 1.5vw;
+  color: orange;
+}
+.about-header p {
+  font-size: 1.4vw;
+  max-width: 80%;
+  margin: auto;
+}
+/* CARDS SECTION */
+.about-content {
+  display: flex;
+  justify-content: space-around;
+  padding: 7vw 2vw;
+  flex-wrap: wrap;
+}
+.about-card {
+  width: 22vw;
+  background: #f5f5f5;
+  padding: 2vw;
+  margin: 1.5vw;
+  text-align: center;
+  border-radius: 1vw;
+  box-shadow: 0px 0.3vw 1vw rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+.about-card:hover {
+  transform: translateY(-1.2vw);
+}
+.about-card h3 {
+  color: orange;
+  margin-bottom: 1vw;
+}
+.map-section {
+  height: 30vw;
+  margin-top: 3vw;
+}
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+}

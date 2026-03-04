@@ -1,0 +1,162 @@
+/*  HERO SECTION  */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90vh;
+  background-color: white;
+  font-family: "Times New Roman", Times, serif;
+}
+.hero-image {
+  flex: 1;
+  height: 40vw;
+  width: 40vw;
+  background-image: url('./heroimag.png');
+  background-size: cover;
+  background-position: center;
+  border-top-right-radius: 50% 100%;
+  border-bottom-right-radius: 50% 100%;
+}
+.hero-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1vw;
+  padding-left: 4vw;
+}
+.hero-text h1 {
+  font-size: 4vw;
+  margin: 0;
+}
+.hero-text h2 {
+  font-size: 2.5vw;
+  margin: 0;
+}
+.hero-text h3 {
+  font-size: 1.6vw;
+  margin: 0;
+}
+.hero-trust {
+  font-size: 1.2vw;
+  opacity: 0.9;
+  margin: 0;
+}
+.hero-link a {
+  color: #000;
+  text-decoration: underline;
+  font-size: 1.4vw;
+  font-weight: 500;
+  cursor: pointer;
+}
+/* Services Section */
+.Ourservices {
+  padding: 6vw 4vw;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+.Ourservices h2 {
+  font-size: 3.5vw;
+  margin-bottom: 2vw;
+}
+.Ourservices p {
+  font-size: 1.5vw;
+  margin-bottom: 5vw;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.8;
+}
+.service-cards {
+  display: flex;
+  gap: 0;
+  background-color: #0a1f44;
+  flex-wrap: wrap;
+}
+.card {
+  background: radial-gradient(circle at center, #80cbc4 0%, #e0f7fa 100%);
+  padding: 5vw 2vw;
+  border-radius: 0;
+  flex: 1 1 25%;
+  box-shadow: 0 0.5vw 1.5vw rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-0.5vw);
+  box-shadow: 0 1vw 3vw rgba(0,0,0,0.15);
+}
+.card h3 {
+  font-size: 2vw;
+  margin-bottom: 1.2vw;
+}
+.card p {
+  font-size: 1.5vw;
+  color: #555;
+}
+.vacation-packages {
+  padding: 6vw 4vw;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+.vacation-packages h2 {
+  font-size: 3.2vw;
+  margin-bottom: 4vw;
+}
+.trip-cards {
+  display: flex;
+  gap: 2vw;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 3vw;
+}
+.trip-card {
+  background-color: #fff;
+  border-radius: 2vw;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 0.3vw 1.5vw rgba(0,0,0,0.1);
+  width: 22vw;
+}
+.trip-card img {
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
+}
+.trip-card h3 {
+  font-size: 1.8vw;
+  margin: 1vw 0 0.5vw;
+}
+.trip-card p {
+  font-size: 1.4vw;
+  color: #555;
+}
+.detail-btn button {
+  padding: 0.8vw 3vw;
+  font-size: 1.4vw;
+  background-color: #0a1f44;
+  color: #fff;
+  border: none;
+  border-radius: 2vw;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.detail-btn button:hover {
+  background-color: #0d2b6c;
+}
+.Feedback {
+  padding: 6vw 2vw;
+  background:white;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+.Feedback h2 {
+  font-size: 2.5vw;
+  margin-bottom: 1vw;
+  font-weight: 600;
+}
+.Feedback p {
+  font-size: 1.5vw;
+  letter-spacing: 0.05vw;
+  opacity: 0.9;
+}

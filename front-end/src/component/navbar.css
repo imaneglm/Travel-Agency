@@ -1,0 +1,57 @@
+.navbar {
+  display: flex;
+  height: clamp(50px,6vw,80px);
+  align-items: center;
+  justify-content: space-between;
+  padding: clamp(10px,1vw,15px) clamp(30px,4vw,60px);
+  background: radial-gradient(circle at center, #80cbc4 0%, #e0f7fa 100%);
+  color: white;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: clamp(5px,0.7vw,10px);
+  font-size: clamp(16px,2vw,30px);
+}
+.logo-icon {
+  font-size: clamp(40px,5vw,80px);
+}
+.logo h1 {
+  font-size: clamp(14px,1.6vw,25px);
+  font-weight: 600;
+  margin: 0;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: clamp(15px,2.5vw,35px);
+  margin-left: auto;
+  margin-right: clamp(30px,4vw,60px);
+}
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s ease;
+  font-size: clamp(14px,1.3vw,20px);
+}
+.nav-links a:hover {
+  color: #130339;
+}
+.searchbar {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: clamp(4px,0.4vw,6px) clamp(10px,1vw,15px);
+  border-radius: clamp(15px,2vw,25px);
+}
+.searchbar input {
+  border: none;
+  outline: none;
+  font-size: clamp(12px,1vw,14px);
+  padding-left: clamp(4px,0.5vw,8px);
+}
+.search-icon {
+  font-size: clamp(14px,1.2vw,18px);
+  color: gray;
+}

@@ -1,0 +1,178 @@
+/*  */
+.offers-page {
+  padding: 50px 8%;
+  background-color: #f4f7fb;
+  min-height: 100vh;
+  font-family:'Times New Roman', Times, serif;
+}
+.offers-title {
+  text-align: center;
+  color: orange;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+/*  OFFERS GRID  */
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+/* OFFER CARD */
+.offer-card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.offer-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: 0.3s ease;
+}
+.offer-card:hover img {
+  transform: scale(1.05);
+}
+.offer-card h3 {
+  margin: 15px;
+  font-size: 22px;
+  color: #1e2a38;
+}
+.offer-card p {
+  margin: 0 15px 10px 15px;
+  color: #555;
+}
+.offer-card .price {
+  font-weight: bold;
+  color: #0077ff;
+  margin-bottom: 15px;
+}
+.details-btn {
+  margin: 0 15px 15px 15px;
+  padding: 10px 0;
+  text-align: center;
+  display: block;
+  background: #0077ff;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.details-btn:hover {
+  background: #005fcc;
+}
+/* TRIP DETAILS PAGE */
+.trip-page {
+  padding: 50px 8%;
+  background: #f4f7fb;
+  min-height: 100vh;
+}
+.trip-container {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+/* Left Section */
+.trip-left {
+  flex: 2;
+  min-width: 300px;
+}
+.trip-left img {
+  width: 100%;
+  border-radius: 18px;
+  height: 450px;
+  object-fit: cover;
+  margin-bottom: 25px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+.trip-left h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #1e2a38;
+}
+.trip-location {
+  color: #0077ff;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.trip-description {
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 30px;
+}
+/* Services Section */
+.services-section {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+.services-section h3 {
+  margin-bottom: 15px;
+  color: #1e2a38;
+}
+.services-section ul {
+  list-style: none;
+  padding: 0;
+}
+.services-section li {
+  margin-bottom: 10px;
+  padding: 8px 0;
+  font-weight: 500;
+  color: #444;
+  transition: 0.3s;
+}
+.services-section li:hover {
+  color:#052141;
+  transform: translateX(5px);
+}
+/* Right Section / Booking Card */
+.trip-right {
+  flex: 1;
+  min-width: 350px;
+  min-height: 250px;
+}
+.booking-card {
+  background: rgb(234, 181, 82);
+  color: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,119,255,0.3);
+  position: sticky;
+  top: 40px;
+  transition: 0.3s ease;
+}
+.booking-card:hover {
+  transform: translateY(-5px);
+}
+.booking-card h2 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.booking-card p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+.booking-card button {
+  margin-top: 15px;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.booking-card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #ff5f6d, #ffc371);
+}
