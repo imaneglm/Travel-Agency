@@ -18,9 +18,9 @@ EXCEPTION WHEN OTHERS THEN NULL;
 END;
 /
 
--- =========================
--- CREATE TABLES
--- =========================
+
+-- Creating TABLES
+
 
 CREATE TABLE Services (
   service_id  NUMBER PRIMARY KEY,
@@ -43,9 +43,9 @@ CREATE TABLE Trip_Services (
   FOREIGN KEY (service_id) REFERENCES Services(service_id)
 );
 
--- =========================
+
 -- INSERT DATA (NORTH ONLY)
--- =========================
+
 
 INSERT INTO Services VALUES (1, 'Hotel Paris Centre', 800);
 INSERT INTO Services VALUES (2, 'Flight to Paris',    400);
