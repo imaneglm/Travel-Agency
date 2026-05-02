@@ -1,4 +1,3 @@
-//Home page with all diffrent section it has 
 import React, { useEffect, useState } from "react";
 import "./customerhome.css";
 import heroimag from "./heroimag.png";
@@ -9,6 +8,7 @@ import axios from "axios";
 function CustomerHome() {
   const [trips, setTrips] = useState([]);
   const [loading, setLoading] = useState(true);
+
   // Animate services section
   useEffect(() => {
     const bars = document.querySelectorAll(".bar-fill");
@@ -18,18 +18,22 @@ function CustomerHome() {
     });
   }, []);
 
-  // this fetch trips for "Best Offer" section (random i selected  1,2,3)
+  // Fetch Best Offers
   useEffect(() => {
     const fetchBestOffers = async () => {
       try {
         const res = await axios.get("http://localhost:3001/api/trips");
+
         const bestTrips = res.data
-          .filter((trip) => [1, 2, 3].includes(trip.trip_id))
+          .filter((trip) =>
+            ["Paris", "London", "Dubai"].includes(trip.destination)
+          )
           .map((trip) => ({
             trip_id: trip.trip_id,
             destination: trip.destination,
-            total_trip_cost: trip.total_trip_cost,
+            total_cost: trip.total_cost,
           }));
+
         setTrips(bestTrips);
       } catch (err) {
         console.error("Error fetching best offers:", err);
@@ -37,6 +41,7 @@ function CustomerHome() {
         setLoading(false);
       }
     };
+
     fetchBestOffers();
   }, []);
 
@@ -49,7 +54,9 @@ function CustomerHome() {
           <h1>Explore The World With Us</h1>
           <h2>Travel More...Worry Less!</h2>
           <h3>Your Journey Begins Here.</h3>
-          <p>Unlock Your Dream Vacation: Explore Our Exclusive Trips Packages </p>
+          <p>
+            Unlock Your Dream Vacation: Explore Our Exclusive Trips Packages
+          </p>
           <p className="hero-trust">
             ⭐ 4 Stars Rating | 🌍 10,000+ Happy Travelers | 24/7 Support
           </p>
@@ -58,13 +65,15 @@ function CustomerHome() {
           </p>
         </div>
       </section>
-      {/* Our Services Section */}
+
+      {/* Services */}
       <section className="Ourservices">
         <h2>Why We Are The Best?!</h2>
         <p>
           At TravelAgency, we create unforgettable experiences with unbeatable
           prices, expert guidance, and personalized support.
         </p>
+
         <div className="service-cards">
           <div className="card">
             <h3>Amazing Offers</h3>
@@ -84,9 +93,11 @@ function CustomerHome() {
           </div>
         </div>
       </section>
-      {/*  Best Offers Section */}
+
+      {/* Best Offers */}
       <section className="vacation-packages">
         <h2>Our Best Offer For This Month</h2>
+
         <div className="trip-cards">
           {loading ? (
             <p>Loading offers...</p>
@@ -97,22 +108,26 @@ function CustomerHome() {
               <div className="trip-card" key={trip.trip_id}>
                 <img src={background} alt={trip.destination} />
                 <h3>{trip.destination}</h3>
-                <p>Total Price: ${trip.total_trip_cost}00.00DA</p>
+                <p>Total Price: {trip.total_cost}00.00DA</p>
               </div>
             ))
           )}
         </div>
+
         <div className="detail-btn">
-          <Link to="/our-trips"><button>See More</button></Link>
+          <Link to="/our-trips">
+            <button>See More</button>
+          </Link>
         </div>
       </section>
-      {/* Feedback Section */}
+
+      {/* Feedback */}
       <section className="Feedback">
         <h2>Happy Customers</h2>
-        <p></p>
         <p>⭐ 4 Stars Rating | 🌍 10,000+ Happy Travelers | 24/7 Support</p>
       </section>
     </div>
   );
 }
+
 export default CustomerHome;
